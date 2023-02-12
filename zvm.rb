@@ -1,13 +1,13 @@
 class Zvm < Formula
   desc "Simple yet powerful version manager for Zig"
   homepage "https://github.com/gaetschwartz/zvm"
-  url "https://github.com/gaetschwartz/zvm/releases/download/0.0.1-staging.14/zvm-aarch64-macos"
-  version "0.0.1-staging.14"
-  sha256 "1d5990e8a1cd7a1e1edc7dcc89e47b5344583cfbdf0696bb8d1ac3c960eb8bd2"
+  url "https://github.com/gaetschwartz/zvm/releases/download/0.0.5/zvm-x86_64-macos"
+  version "0.0.5"
+  sha256 "cdea58fd3ef1dcf5984dbb38c78ad9ccd09895067a4d59ee32fd83503b997c7a"
   license ""
 
   def install
-    bin.install "zvm-aarch64-macos" => "zvm"
+    bin.install "zvm-x86_64-macos" => "zvm"
   end
 
   test do
