@@ -1,8 +1,8 @@
 class Zvm < Formula
   desc "Simple yet powerful version manager for Zig"
   homepage "https://github.com/gaetschwartz/zvm"
-  url "https://github.com/gaetschwartz/zvm/archive/0.1.1.tar.gz"
-  sha256 "1333c7488bea9df19e25eb55c479a2084e6df0da847922daef69a15d331b0b59"
+  url "https:/github.com/gaetschwartz/zvm/archive/0.1.2.tar.gz"
+  sha256 "5e81bf711ab7fb483b3d5b34c9e869c2cfbb8ab00d40d1335421df77ba4bd890"
   license "MIT"
 
   on_macos do
@@ -33,8 +33,8 @@ class Zvm < Formula
   end
 
   resource "known-folders" do
-    url "https://github.com/ziglibs/known-folders/archive/53fe3b676f32e59d46f4fd201d7ab200e5f6cb98.tar.gz"
-    sha256 "3c9d1e293df9e3e48b96114859267c2bf5d8cc924e7e5f7a9628d0c77bb43709"
+    url "https://github.com/ziglibs/known-folders/archive/-53fe3b676f32e59d46f4fd201d7ab200e5f6cb98.tar.gz"
+    sha256 "d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed"
   end
 
   def install
