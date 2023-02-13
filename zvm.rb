@@ -33,7 +33,7 @@ class Zvm < Formula
   end
 
   resource "known-folders" do
-    url "https://github.com/ziglibs/known-folders/archive/-53fe3b676f32e59d46f4fd201d7ab200e5f6cb98.tar.gz"
+    url "https://github.com/ziglibs/known-folders/archive/53fe3b676f32e59d46f4fd201d7ab200e5f6cb98.tar.gz"
     sha256 "d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed"
   end
 
