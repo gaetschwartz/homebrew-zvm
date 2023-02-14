@@ -1,8 +1,8 @@
 class Zvm < Formula
   desc "Simple yet powerful version manager for Zig"
   homepage "https://github.com/gaetschwartz/zvm"
-  url "https:/github.com/gaetschwartz/zvm/archive/0.2.0.tar.gz"
-  sha256 "8cb8a2ccd89b8f7f239693e1a5797fe3a2b85cafa29a1bb356405bc0ee5b3ad7"
+  url "https:/github.com/gaetschwartz/zvm/archive/0.2.1.tar.gz"
+  sha256 "7ae1850d975b616664f208fb38298e11bfac263fda2a48b42949dea3c4675f2d"
   license "MIT"
 
   on_macos do
