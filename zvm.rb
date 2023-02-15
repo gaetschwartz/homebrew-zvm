@@ -8,26 +8,26 @@ class Zvm < Formula
   on_macos do
     if Hardware::CPU.arm?
       resource "zig" do
-        url "https://ziglang.org/builds/zig-macos-aarch64-0.11.0-dev.1606+3c2a43fdc.tar.xz"
-        sha256 "203bd59d6073346c8a23ab3f5507c8667682a857a7bbc39423df0f8388840fd0"
+        url "https://ziglang.org/builds/zig-macos-aarch64-0.11.0-dev.1638+7199d7c77.tar.xz"
+        sha256 "5709c27d581988f50f5e6fd5b69d92707787e803a1d04992e290b764617664e6"
       end
     else
       resource "zig" do
-        url "https://ziglang.org/builds/zig-macos-x86_64-0.11.0-dev.1606+3c2a43fdc.tar.xz"
-        sha256 "6e66506952ba89f3ee83753739db223e326a264a47d28d382a729720aa0152f9"
+        url "https://ziglang.org/builds/zig-macos-x86_64-0.11.0-dev.1638+7199d7c77.tar.xz"
+        sha256 "88d194adb2f3c1a9edbb4a24d018007d5f827a57d1d26b2d9f3459236da1b7b6"
       end
     end
   end
   on_linux do
     if Hardware::CPU.arm?
       resource "zig" do
-        url "https://ziglang.org/builds/zig-linux-aarch64-0.11.0-dev.1606+3c2a43fdc.tar.xz"
-        sha256 "2d116916f95c684cd663801425341e55085810e50126740c94ce5b669c5dc712"
+        url "https://ziglang.org/builds/zig-linux-aarch64-0.11.0-dev.1638+7199d7c77.tar.xz"
+        sha256 "b759a11993949531c692ccfc3d1a004b14df714a7a3515fe0b5c90c9a7631d61"
       end
     else
       resource "zig" do
-        url "https://ziglang.org/builds/zig-linux-x86-0.11.0-dev.1606+3c2a43fdc.tar.xz"
-        sha256 "3ed621c4443a46d6058bdc08cb0f06f7fba6063cad6b6b93ac2cf6035220262b"
+        url "https://ziglang.org/builds/zig-linux-x86_64-0.11.0-dev.1638+7199d7c77.tar.xz"
+        sha256 "028dad5189e02b2058679b64df16e854a1c1ca0e6044b334d4f3be6e35544f07"
       end
     end
   end
@@ -42,6 +42,7 @@ class Zvm < Formula
     resource("known-folders").unpack "known-folders"
     system "ziglang-org/zig/zig", "build", "-Doptimize=ReleaseSafe"
     bin.install "zig-out/bin/zvm"
+    zsh_completion.install "scripts/completion.zsh" => "_zvm"
   end
 
   test do
