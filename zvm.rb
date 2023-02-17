@@ -42,7 +42,7 @@ class Zvm < Formula
     resource("known-folders").unpack "known-folders"
     system "ziglang-org/zig/zig", "build", "-Doptimize=ReleaseSafe"
     bin.install "zig-out/bin/zvm"
-    zsh_completion.install "scripts/completion.zsh" => "_zvm"
+    generate_completions_from_executable(bin/"zvm", "completions", shell_parameter_format: "--shell=", shells: ["zsh"])
   end
 
   test do
