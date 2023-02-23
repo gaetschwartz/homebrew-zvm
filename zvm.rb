@@ -40,6 +40,7 @@ class Zvm < Formula
   def install
     resource("zig").unpack "ziglang-org/zig"
     resource("known-folders").unpack "known-folders"
+    ohai "Building zvm... (this may take a while)"
     system "ziglang-org/zig/zig", "build", "-Doptimize=ReleaseSafe"
     bin.install "zig-out/bin/zvm"
     generate_completions_from_executable(bin/"zvm", "completions", "--shell", "zsh", shells: [:zsh])
