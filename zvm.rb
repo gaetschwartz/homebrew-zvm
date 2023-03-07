@@ -8,26 +8,26 @@ class Zvm < Formula
   on_macos do
     if Hardware::CPU.arm?
       resource "zig" do
-        url "https://ziglang.org/builds/zig-macos-aarch64-0.11.0-dev.1857+010596c93.tar.xz"
-        sha256 "6c3cb94abca2d743b7ef1879a6ce526d3e509cbbeacd7dbddd8e89ee063330dc"
+        url "https://ziglang.org/builds/zig-macos-aarch64-0.11.0-dev.1897+6218e4004.tar.xz"
+        sha256 "aa270a026c7ddace20e56149882e825f539b4f563f6716f79ac8cb7cd3483a6f"
       end
     else
       resource "zig" do
-        url "https://ziglang.org/builds/zig-macos-x86_64-0.11.0-dev.1857+010596c93.tar.xz"
-        sha256 "274510a486259de58ff0fabd2cf73786975eeec9afa6124b02eeac27609515e6"
+        url "https://ziglang.org/builds/zig-macos-x86_64-0.11.0-dev.1897+6218e4004.tar.xz"
+        sha256 "4c0905d549cefbbfa4fe591e473af59f3cd263b4c74d1a79db88e99b4b0dbb5b"
       end
     end
   end
   on_linux do
     if Hardware::CPU.arm?
       resource "zig" do
-        url "https://ziglang.org/builds/zig-linux-aarch64-0.11.0-dev.1857+010596c93.tar.xz"
-        sha256 "fbf4da87e44a39c6d6f63a21009fe4fcb52cfabbd3a2179b358cdceba1471879"
+        url "https://ziglang.org/builds/zig-linux-aarch64-0.11.0-dev.1897+6218e4004.tar.xz"
+        sha256 "8a71409917a95100315fcae41e79ecf97d109f9145c5dc8d6d4314f48b0a5a9b"
       end
     else
       resource "zig" do
-        url "https://ziglang.org/builds/zig-linux-x86_64-0.11.0-dev.1857+010596c93.tar.xz"
-        sha256 "9b925ef92e5405b68b07f7fa56b8e12db55937bfac26947472ef8c2b5447816a"
+        url "https://ziglang.org/builds/zig-linux-x86_64-0.11.0-dev.1897+6218e4004.tar.xz"
+        sha256 "4d68b050ad3788559f2a7ab2f2af54b4630a1007c4d77f71c76efa8dd62a840c"
       end
     end
   end
