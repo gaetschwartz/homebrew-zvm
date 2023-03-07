@@ -32,14 +32,8 @@ class Zvm < Formula
     end
   end
 
-  resource "known-folders" do
-    url "https://github.com/ziglibs/known-folders/archive/53fe3b676f32e59d46f4fd201d7ab200e5f6cb98.tar.gz"
-    sha256 "3c9d1e293df9e3e48b96114859267c2bf5d8cc924e7e5f7a9628d0c77bb43709"
-  end
-
   def install
     resource("zig").unpack "ziglang-org/zig"
-    resource("known-folders").unpack "known-folders"
     ohai "Building zvm... (this may take a while)"
     system "ziglang-org/zig/zig", "build", "-Doptimize=ReleaseSafe"
     bin.install "zig-out/bin/zvm"
@@ -47,6 +41,6 @@ class Zvm < Formula
   end
 
   test do
-    system "#{bin}/zvm", "--version", "--verbose"
+    system "#{bin}/zvm", "--version"
   end
 end
